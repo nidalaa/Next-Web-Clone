@@ -93,3 +93,19 @@ body{
     height: 14rem;
     background-color: aquamarine;
 }
+
+.footer-1{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 12rem;
+}
+
+.footer-2{
+    background-color: cornflowerblue;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 6rem;
+}
