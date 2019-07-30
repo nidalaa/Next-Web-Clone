@@ -17,3 +17,79 @@ body{
     height: 2rem;
     background-color: #fd3;
 }
+
+.landing-menu-container{
+    display: flex;
+    padding: 2px 8px;
+}
+.landing-1{
+    background-color: chocolate;
+    height: 24rem;
+    width: 70%;
+}
+.landing-group{
+    height: 24rem;
+    width: 30%;
+    padding: 0 0 0 8px;
+}
+.landing-2{
+    background-color: blue;
+    width: 100%;
+    height: 12rem;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+.landing-3{
+    background-color:green;
+    height: 11.5rem;
+    width:100%;
+}
+.latest-news{
+    margin: 5rem 1.4375rem;
+}
+.news-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+  
+}
+.news-grid-item{
+    height: 14rem;
+    background-color: aquamarine;
+}
+.latest-funding{
+    margin: 5.5rem 1.4375rem;
+}
+.fund-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+  
+}
+.fund-grid-item{
+    height: 14rem;
+    background-color: aquamarine;
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px; 
+    margin: 5.5rem 1.4375rem;
+}
+.product-grid-item{
+    background-color: aquamarine;
+    height: 24rem;
+}
+.latest-deals{
+    margin: 5rem 1.4375rem;
+}
+.deal-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+  
+}
+.deal-grid-item{
+    height: 14rem;
+    background-color: aquamarine;
+}
