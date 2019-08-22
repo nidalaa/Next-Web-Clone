@@ -1,926 +1,1008 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 /**********************RESET*******************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /*********************************************/
 
-body{
-    padding: 0;
-	margin: 0;
-	
+/*****************************************/
+
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 1440px;
+  overflow-x: hidden;
 }
-.top-nav{
-    width: 100%;
-    height: 2rem;
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0 0 0 2rem;
+.top-nav {
+  width: 100%;
+  height: 2rem;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 0 0 2rem;
 }
-.top-nav ul li{
-    display: inline-flex;
-    padding: 8px 0 0 0;
-    font-size: 14px;
+.top-nav ul li {
+  display: inline-flex;
+  padding: 8px 0 0 0;
+  font-size: 14px;
 }
-.top-nav button{
-    border: none;
-    background: none;
-    color: #aaa;
+.top-nav button {
+  border: none;
+  background: none;
+  color: #aaa;
 }
 
-.main-nav ul li{
-    display: inline-flex;
-    padding: 12px 5px 0 0;
+.main-nav ul li {
+  display: inline-flex;
+  padding: 12px 5px 0 0;
 }
-.top-nav-dropdown{
-    display: none;
-  
+.top-nav-dropdown {
+  display: none;
 }
-li a{
-    text-decoration: none;
-    color: hsla(0, 0%, 100%, .6);
-}
-
-li a:hover{
-    color: white;
-}
-.main-nav{
-    height: 2.5rem;
-    background-color: #fff;   
-    font-family: 'Archivo Narrow', sans-serif;
-    padding: 0 0 0 2rem;
+li a {
+  text-decoration: none;
+  color: hsla(0, 0%, 100%, 0.6);
 }
 
-.main-nav li a{
-    color: #aaa;
-    display: block;
-    letter-spacing: 0.04em;
-    font-weight: 500;
-    height: 30px;
-    font-size: 15px;
+li a:hover {
+  color: white;
+}
+.main-nav {
+  display: inline-flex;
+}
+#headerline {
+  width: 8%;
+  height: 100%;
+}
+.main-nav {
+  height: 2.5rem;
+  background-color: #fff;
+  font-family: "Archivo Narrow", sans-serif;
+  padding: 0 0 0 2rem;
 }
 
-.main-nav li a:hover{
-    color: black;
+.main-nav li a {
+  color: #aaa;
+  display: block;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  height: 30px;
+  font-size: 15px;
 }
 
-.promo-nav{
-    height: 2rem;
-    background-color: #fd3;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    padding: 0 0 0 2rem;
-} 
-
-.promo-nav img{
-    width: 25px;
-    height: 12px;
-}
-.promo-nav a{
-    text-decoration: none;
-    color: black;
-}
-.promo-nav p{
-    padding: 8px 5px 0 0;
+.main-nav li a:hover {
+  color: black;
 }
 
-.header-logo img{
-    height: 60%;
-    width: 60%;
+.promo-nav {
+  height: 2rem;
+  background-color: #fd3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 0 0 0 2rem;
+}
+
+.promo-nav img {
+  width: 25px;
+  height: 12px;
+}
+.promo-nav a {
+  text-decoration: none;
+  color: black;
+}
+.promo-nav p {
+  padding: 8px 5px 0 0;
+}
+
+.header-logo img {
+  height: 60%;
+  width: 60%;
 }
 /**************************************************/
 
+/*****************************************/
 .headlines {
-	height: 25rem;
-	padding: 2px 0;
-	display: grid;
-	grid-gap: 6px;
-	grid-template-areas: "art1 art1 art2""art1 art1 art3";
+  height: 25rem;
+  padding: 2px 0;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-areas: "art1 art1 art2" "art1 art1 art3";
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 /* main headline*/
 .cover-image {
-	background-image: url(images/vrtaller1200B-796x417.png);
-	background-color: black;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100%;
-	grid-area: art1;
-	position: relative;
-	mix-blend-mode: darken;
-}
-
-.cover-gradient {
-	background: transparent url(images/cover-gradient.png) no-repeat;
-	background-position: 0 0;
-	background-size: cover;
-	bottom: 0px;
-	left: 0px;
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	z-index: 6;
-	mix-blend-mode: lighten;
-	transition: .4s ease;
-}
-
-.cover-gradient:hover {
-	mix-blend-mode: darken;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), black),
+    url(images/vrtaller1200B-796x417.png);
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  grid-area: art1;
+  position: relative;
+  mix-blend-mode: darken;
 }
 
 .cover-logo {
-	position: absolute;
-	left: 24px;
-	top: 24px;
-	max-width: 50%;
-	height: 112px;
-	z-index: 7;
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  max-width: 50%;
+  height: 112px;
+  z-index: 1;
 }
 
 .cover-date {
-	color: #fff;
-	position: absolute;
-	top: 16px;
-	right: 24px;
-	z-index: 7;
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  z-index: 7;
 }
 
 .main-header {
-	position: absolute;
-	bottom: 4px;
-	left: 4px;
-	right: 4px;
-	z-index: 7;
-	padding: 5px;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  z-index: 7;
+  padding: 5px;
 }
 
 .main-header h5 {
-	position: relative;
-	color: #fff;
-	left: 2%;
-	top: 10px;
-	font-size: 14px;
-	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  color: #fff;
+  left: 2%;
+  top: 10px;
+  font-size: 14px;
 }
 
 .main-header h2 {
-	position: relative;
-	color: #fff;
-	font-size: 55px;
-	font-weight: 900;
-	line-height: 1;
-	padding-right: 5px;
-	left: 2%;
-	right: 2%;
+  position: relative;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 10px 5px 0 0;
+  left: 2%;
+  right: 2%;
+}
+.smaller h2 {
+  font-size: 25px !important;
+  padding: 10px 5px 5px 0 !important;
 }
 
 .by {
-	position: relative;
-	color: #fff9;
-	bottom: 0.3em;
-	left: 2%;
-	font-size: 12px;
+  position: relative;
+  color: #fff9;
+  bottom: 0.3em;
+  left: 2%;
+  font-size: 12px;
 }
 
 .fa-clock,
 .fa-share-alt {
-	padding: 0px 5px;
+  padding: 0px 5px;
 }
 
 /*small headlines*/
 
 .small-headline {
-	background-color: #000;
-	background-position: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100%;
-	position: relative;
-	filter: opacity(85%);
-	transition: .4s ease;
+  background-color: #000;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  filter: opacity(85%);
+  transition: 0.4s ease;
 }
 
 .small-headline:hover {
-	filter: opacity(100%);
+  filter: opacity(100%);
 }
 
 #small-headline1 {
-	background-image: url(images/download111.png);
-	grid-area: art2;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), black),
+    url(images/download111.png);
+  grid-area: art2;
 }
 
 #small-headline2 {
-	background-image: url(images/google-play-store-apps-malware-796x450.jpg);
-	grid-area: art3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), black),
+    url(images/google-play-store-apps-malware-796x450.jpg);
+  grid-area: art3;
 }
 
 .small-header {
-	position: absolute;
-	bottom: 4px;
-	left: 4px;
-	right: 4px;
-	z-index: 7;
-	padding: 5px;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  z-index: 7;
+  padding: 5px;
 }
 
 .small-header h5 {
-	position: relative;
-	color: #fff;
-	left: 2%;
-	top: 10px;
-	font-size: 14px;
+  position: relative;
+  color: #fff;
+  left: 2%;
+  top: 10px;
+  font-size: 14px;
 }
 
 .small-header h2 {
-	position: relative;
-	color: #fff;
-	font-size: 28px;
-	font-weight: 900;
-	line-height: 1;
-	padding-right: 5px;
-	left: 2%;
-	right: 2%;
+  position: relative;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  padding-right: 5px;
+  left: 2%;
+  right: 2%;
 }
 
 /*******************************************/
-.latest-news{
-    margin: 5rem 1.4375rem;
+.latest-news {
+  margin: 5rem 1.4375rem;
 }
-.news-grid{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
-  
+.news-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
 }
-.news-grid-item{
-    height: 14rem;
-	padding: 12px;
-	cursor: pointer;
+.news-grid-item {
+  height: 14rem;
+  padding: 12px;
+  cursor: pointer;
 }
 .news-grid-item h4 {
-	margin-top: 10px;
-	color: #000;
-	font-weight: bold;
+  margin-top: 10px;
+  color: #000;
+  font-weight: bold;
 }
 
 .news-grid-item p {
-	color: #aaa;
-	margin-top: 5px;
-	font-size: 13px;
+  color: #aaa;
+  margin-top: 5px;
+  font-size: 13px;
 }
 .flexnews-part-img {
-	background-color: #131313;
-	background-position: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 12rem;
-	overflow: hidden;
-	word-wrap: break-word;
+  background-color: #131313;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 12rem;
+  overflow: hidden;
+  word-wrap: break-word;
 }
-.latest-news h1{
-	text-decoration: none;
-	color: #f42;
-	font-size: 28px;
-	padding-left: 12px;
+.latest-news h1 {
+  text-decoration: none;
+  color: #f42;
+  font-size: 28px;
+  padding-left: 12px;
 }
 /******* grid images ***************/
 #news-img1 {
-	background-image: url(images/bioorganic-540x265.jpg);
+  background-image: url(images/bioorganic-540x265.jpg);
 }
 
 #news-img2 {
-	background-image: url(images/bitcoinsv-1-480x270.jpg);
+  background-image: url(images/bitcoinsv-1-480x270.jpg);
 }
 
 #news-img3 {
-	background-image: url(images/maxresdefault-1-480x270.jpg);
+  background-image: url(images/maxresdefault-1-480x270.jpg);
 }
 
 #news-img4 {
-	background-image: url(images/OnePlus-7-514x270.jpg);
+  background-image: url(images/OnePlus-7-514x270.jpg);
 }
 
 #news-img5 {
-	background-image: url(images/sale_18296_primary_image_wide-540x270.jpg);
+  background-image: url(images/sale_18296_primary_image_wide-540x270.jpg);
 }
 
 #news-img6 {
-	background-image: url(images/TNW2019_GillianTans-525x270.png);
+  background-image: url(images/TNW2019_GillianTans-525x270.png);
 }
 
 #news-img7 {
-	background-image: url(images/yang-yanggang-cryptocurrency-bitcoin-blockchain-regulations-US-china-europe-digital-assets-2020-presidential-race-480x270.jpg);
+  background-image: url(images/yang-yanggang-cryptocurrency-bitcoin-blockchain-regulations-US-china-europe-digital-assets-2020-presidential-race-480x270.jpg);
 }
 
 #news-img8 {
-	background-image: url(images/Smart-House-405x270.jpg);
+  background-image: url(images/Smart-House-405x270.jpg);
 }
 /***********************************/
 .deals {
-	margin-top: 40px;
-	margin-bottom: 4em;
+  margin-top: 40px;
+  margin-bottom: 4em;
 }
 
 .indexco {
-	float: left;
-	text-decoration: none;
-	color: #f42;
-	font-size: 28px;
-	padding-left: 12px;
+  float: left;
+  text-decoration: none;
+  color: #f42;
+  font-size: 28px;
+  padding-left: 12px;
 }
 
 .deals-header-right {
-	float: right;
-	color: #f42;
-	font-size: 16px;
-	text-decoration: none;
-	margin-top: 10px;
-	padding: 0px 12px;
+  float: right;
+  color: #f42;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 0px 12px;
 }
 
 #middle-deals-right {
-	border-right: 1px solid #f42;
-	border-left: 1px solid #f42;
+  border-right: 1px solid #f42;
+  border-left: 1px solid #f42;
 }
 
 .flex-deals-part {
-	position: relative;
-	flex-basis: 23%;
-	padding: 12px;
-	cursor: pointer;
-	background: #fffaf8;
+  position: relative;
+  flex-basis: 23%;
+  padding: 12px;
+  cursor: pointer;
+  background: #fffaf8;
 }
 
 .flex-deals-part img {
-	width: 60px;
-	min-width: 60px;
-	max-width: 60px;
-	height: 60px;
-	min-height: 60px;
-	max-height: 60px;
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  height: 60px;
+  min-height: 60px;
+  max-height: 60px;
 
-	position: absolute;
-	top: 25px;
-	left: 25px;
-	z-index: 1;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
 }
 
 .deals-head-title {
-	background: #f42;
-	color: #fff;
-	padding: 10.66666667px 16px;
-	padding-left: 84px;
-	margin: 0 !important;
-	font-size: 18px !important;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  background: #f42;
+  color: #fff;
+  padding: 10.66666667px 16px;
+  padding-left: 84px;
+  margin: 0 !important;
+  font-size: 18px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .deals-head {
-	padding: 10.66666667px 16px;
-	padding-left: 84px;
-	color: #000;
-	background: rgba(255, 68, 34, .08);
-	margin: 0;
+  padding: 10.66666667px 16px;
+  padding-left: 84px;
+  color: #000;
+  background: rgba(255, 68, 34, 0.08);
+  margin: 0;
 }
 
 .deals-head h4 {
-	font-size: 18px;
-	color: #000;
-	margin: 0 !important;
+  font-size: 18px;
+  color: #000;
+  margin: 0 !important;
 }
 
 .deals-head h5 {
-	opacity: .5;
-	margin: 0;
+  opacity: 0.5;
+  margin: 0;
 }
 .deals-head h5 {
-	opacity: .5;
-	margin: 0;
+  opacity: 0.5;
+  margin: 0;
 }
 
 .flex-deals-text {
-	padding: 6px 16px;
+  padding: 6px 16px;
 }
 
 .flex-deals-text p {
-	padding-left: 5px;
-	position: relative;
-	font-size: 13px;
-	color: #555;
-	margin-right: 1em;
-	line-height: 22px;
+  padding-left: 5px;
+  position: relative;
+  font-size: 13px;
+  color: #555;
+  margin-right: 1em;
+  line-height: 22px;
 }
 
 .fa-tag,
 .fa-briefcase {
-	color: #000;
+  color: #000;
 }
 
 .flex-deals-text p:hover {
-	color: #000;
+  color: #000;
 }
 
 .flex-deals-footer {
-	border-top: 1px solid #ff442240;
+  border-top: 1px solid #ff442240;
 }
 
 .flex-deals-footer p {
-	padding: 6px 16px;
-	color: #555;
-	font-size: 12px;
-	line-height: 20px;
+  padding: 6px 16px;
+  color: #555;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .flex-deals-footer span {
-	color: #aaa;
+  color: #aaa;
 }
 .flex-row {
-	display: flex;
-	-ms-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	margin: auto;
-	width: 100%;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  margin: auto;
+  width: 100%;
 }
 /***********************************/
 
 .row3 {
-	position: relative;
-	flex-basis: 30%;
-	padding: 15px;
-	cursor: pointer;
+  position: relative;
+  flex-basis: 30%;
+  padding: 15px;
+  cursor: pointer;
 }
 
 .row3 h2 {
-	color: #f42;
-	font-size: 28px;
+  color: #f42;
+  font-size: 28px;
 }
 
 .row3-img {
-	background-position: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 18vw;
-	min-height: 230px;
-	max-height: 275px;
-	background-color: black;
-	position: relative;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 18vw;
+  min-height: 230px;
+  max-height: 275px;
+  background-color: black;
+  position: relative;
 }
 
 .row3-img-gradient {
-	background: transparent url(images/image-gradient.png) no-repeat;
-	background-size: 100% 100%;
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 2;
+  background: transparent url(images/image-gradient.png) no-repeat;
+  background-size: 100% 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 #row3-img1 {
-	background-image: url(images/Apple-tag-796x418.jpg);
+  background-image: url(images/Apple-tag-796x418.jpg);
 }
 
 #row3-img2 {
-	background-image: url(images/P30-4-of-5-368x276.jpg);
+  background-image: url(images/P30-4-of-5-368x276.jpg);
 }
 
 #row3-img3 {
-	background-image: url(images/google-protest-368x276.png);
+  background-image: url(images/google-protest-368x276.png);
 }
 
 #row3-img4 {
-	background-image: url(images/roland-368x276.jpg);
+  background-image: url(images/roland-368x276.jpg);
 }
 
 #row3-img5 {
-	background-image: url(images/download2-368x276.png);
+  background-image: url(images/download2-368x276.png);
 }
 
 #row3-img6 {
-	background-image: url(images/Untitled-design-9-368x276.jpg);
+  background-image: url(images/Untitled-design-9-368x276.jpg);
 }
 
 #row3-img7 {
-	background-image: url(images/firefox-stop-cryptojacking-bitcoin-mining-cryptocurrency-monero-blockchain-mozilla-368x276.jpg);
+  background-image: url(images/firefox-stop-cryptojacking-bitcoin-mining-cryptocurrency-monero-blockchain-mozilla-368x276.jpg);
 }
 
 #row3-img8 {
-	background-image: url(images/MK-11-368x276.jpg);
+  background-image: url(images/MK-11-368x276.jpg);
 }
 
 .most-popular {
-	position: absolute;
-	bottom: 0;
-	padding-left: 2%;
-	padding-right: 5%;
-	color: #fff;
-	z-index: 2;
+  position: absolute;
+  bottom: 0;
+  padding-left: 2%;
+  padding-right: 5%;
+  color: #fff;
+  z-index: 2;
 }
 
 .most-popular h2 {
-	color: #fff;
-	font-size: 20px;
-	left: 2%;
+  color: #fff;
+  font-size: 20px;
+  left: 2%;
 }
 
 .most-popular h5 {
-	color: #fff;
-	margin-bottom: 10px;
-	left: 2%;
+  color: #fff;
+  margin-bottom: 10px;
+  left: 2%;
 }
 
 .most-popular p {
-	color: #fff9;
-    left: 2%;
-    padding: 8px 0 5px 0;
-	font-size: 12px;
+  color: #fff9;
+  left: 2%;
+  padding: 8px 0 5px 0;
+  font-size: 12px;
 }
 
 .row3top {
-	position: relative;
-	background-color: #ff44220f;
-	height: 96px;
-	color: #f42;
-    font-size: 14px;
-    font-weight: 900;
-    padding-top: 1rem;
+  position: relative;
+  background-color: #ff44220f;
+  height: 96px;
+  color: #f42;
+  font-size: 14px;
+  font-weight: 900;
+  padding-top: 1rem;
 }
 
 .row3top h5 {
-	position: absolute;
-	padding-left: 2%;
+  position: absolute;
+  padding-left: 2%;
 }
 
 .row3top h4 {
-	position: absolute;
-	top: 40px;
-	padding-left: 2%;
-	padding-right: 30%;
-	font-size: 14px;
+  position: absolute;
+  top: 40px;
+  padding-left: 2%;
+  padding-right: 30%;
+  font-size: 14px;
 }
 
 .row3top span {
-	background-color: #000;
-	background-position: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 96px;
-	height: 96px;
-	float: right;
+  background-color: #000;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 96px;
+  height: 96px;
+  float: right;
 }
 
 #row3top-span1 {
-	background-image: url(images/Google-Play-budget-hed.jpg);
+  background-image: url(images/Google-Play-budget-hed.jpg);
 }
 
 #row3top-span2 {
-	background-image: url(images/IMG_20190417_130740.jpg);
+  background-image: url(images/IMG_20190417_130740.jpg);
 }
 
 #row3top-span3 {
-	background-image: url(images/Untitled-design32.png);
+  background-image: url(images/Untitled-design32.png);
 }
 
 #row3top-span4 {
-	background-image: url(images/autodesk.jpg);
+  background-image: url(images/autodesk.jpg);
 }
 
 #row3top-span5 {
-	background-image: url(images/download1.png);
+  background-image: url(images/download1.png);
 }
 
 #row3top-span6 {
-	background-image: url(images/sextortion-blockchain-cryptocurrency-bitcoin-masturbation-video-hack.jpg);
+  background-image: url(images/sextortion-blockchain-cryptocurrency-bitcoin-masturbation-video-hack.jpg);
 }
 
 #row3top-span7 {
-	background-image: url(images/Stadia-black-hed.jpg);
+  background-image: url(images/Stadia-black-hed.jpg);
 }
 
 #row3top-span8 {
-	background-image: url(images/Archspire.jpg);
+  background-image: url(images/Archspire.jpg);
 }
 
 .latest-list {
-	position: relative;
+  position: relative;
 }
 
 .latest-list-part::before {
-	background-color: #f42;
-	border-radius: 50%;
-	content: "";
-	display: block;
-	height: 4px;
-	left: 0;
-	position: absolute;
-	top: 7px;
-	width: 4px;
+  background-color: #f42;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 4px;
 }
 
 .latest-list-part {
-	padding: 0px 15px 10px;
-	color: #555;
-	font-size: 13px;
-	line-height: 18px;
-	border-bottom: 1px solid #eee;
+  padding: 0px 15px 10px;
+  color: #555;
+  font-size: 13px;
+  line-height: 18px;
+  border-bottom: 1px solid #eee;
 }
 
 /********************DEALS**********************/
 #deals-img1 {
-	background-image: url(images/sale_18296_primary_image.jpg);
-	background-position: 0 100%;
-	max-height: 196px;
-	overflow: hidden;
+  background-image: url(images/sale_18296_primary_image.jpg);
+  background-position: 0 100%;
+  max-height: 196px;
+  overflow: hidden;
 }
 
 #deals-img2 {
-	background-image: url(images/sale_16768_primary_image.jpg);
-	background-position: 0 100%;
-	max-height: 196px;
-	overflow: hidden;
+  background-image: url(images/sale_16768_primary_image.jpg);
+  background-position: 0 100%;
+  max-height: 196px;
+  overflow: hidden;
 }
 
 #deals-img3 {
-	background-image: url(images/sale_14168_primary_image.jpg);
-	background-position: 0 100%;
-	max-height: 196px;
-	overflow: hidden;
+  background-image: url(images/sale_14168_primary_image.jpg);
+  background-position: 0 100%;
+  max-height: 196px;
+  overflow: hidden;
 }
 
 #deals-img4 {
-	background-image: url(images/sale_18696_primary_image.jpg);
-	background-position: 0 100%;
-	max-height: 196px;
-	overflow: hidden;
+  background-image: url(images/sale_18696_primary_image.jpg);
+  background-position: 0 100%;
+  max-height: 196px;
+  overflow: hidden;
 }
 
 #deals-img5 {
-	background-image: url(images/sale_18751_primary_image.jpg);
-	background-position: 0 100%;
-	max-height: 196px;
-	overflow: hidden;
+  background-image: url(images/sale_18751_primary_image.jpg);
+  background-position: 0 100%;
+  max-height: 196px;
+  overflow: hidden;
 }
 
 #deals-img6 {
-	background-image: url(images/sale_18184_primary_image.jpg);
-	background-position: 0 100%;
-	max-height: 196px;
-	overflow: hidden;
+  background-image: url(images/sale_18184_primary_image.jpg);
+  background-position: 0 100%;
+  max-height: 196px;
+  overflow: hidden;
 }
 
 #deals-img7 {
-	background-image: url(images/sale_18697_primary_image.jpg);
-	background-position: 0 100%;
-	max-height: 196px;
-	overflow: hidden;
+  background-image: url(images/sale_18697_primary_image.jpg);
+  background-position: 0 100%;
+  max-height: 196px;
+  overflow: hidden;
 }
 
 #deals-img8 {
-	background-image: url(images/sale_17183_primary_image.jpg);
-	background-position: 0 100%;
-	overflow: hidden;
+  background-image: url(images/sale_17183_primary_image.jpg);
+  background-position: 0 100%;
+  overflow: hidden;
 }
 
 .off {
-	background-image: url(images/deals-ribbon.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	color: #000;
-	display: block;
-	height: 80px;
-	width: 80px;
-	overflow: hidden;
-	position: absolute;
-	right: 12px;
-	top: 12px;
-	z-index: 1;
+  background-image: url(images/deals-ribbon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #000;
+  display: block;
+  height: 80px;
+  width: 80px;
+  float: right;
+  z-index: 1;
 }
 
 .off div {
-	transform: rotate(45deg);
-	font-size: 14px;
-	font-weight: 700;
-	left: 7px;
-	position: relative;
-	text-align: center;
-	text-transform: uppercase;
-	top: 20px;
-	width: 100%;
+  transform: rotate(45deg);
+  font-size: 14px;
+  font-weight: 700;
+  left: 7px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 20px;
+  width: 100%;
 }
 
 .deals-span {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 /***************************************************/
-footer{
-	text-align: center;
-	width: 100%;
+footer {
+  text-align: center;
+  width: 100%;
 }
-.footer-1{
-    background-color: #131313;
-	height: 8rem;
-	padding: 2.5rem 0 0 0;
-}
-
-.footer-1 ul li{
-	display: inline-flex;
-	text-decoration: none;
-	padding: 0 0.75rem 0 0.75rem;
-}
-.footer-1-media-2{
-	padding: 0.85rem 0 0 0;
-	font-size: 0.75rem;
-}
-.footer-1-media-1 li a{
-	background: #333;
-	border-radius: 50%;
-	padding: 0.75rem;
-	box-sizing: border-box;
+.footer-1 {
+  background-color: #131313;
+  height: 8rem;
+  padding: 2.5rem 0 0 0;
 }
 
-.footer-1-media-2 li a{
-	font-weight: 500;
-	display: inline;
-	line-height: 24px;
-	color: #aaa;
-	font-family: 'Archivo Narrow', sans-serif;
+.footer-1 ul li {
+  display: inline-flex;
+  text-decoration: none;
+  padding: 0 0.75rem 0 0.75rem;
+}
+.footer-1-media-2 {
+  padding: 0.85rem 0 0 0;
+  font-size: 0.75rem;
+}
+.footer-1-media-1 li a {
+  background: #333;
+  border-radius: 50%;
+  padding: 0.75rem;
+  box-sizing: border-box;
 }
 
-.footer-2{
-	background-color: black;
-	width: 100%;
-	height: 4rem;
-	padding: 2rem 0 0 0;
-	font-size: 14px;
-	color: #aaa;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.copyrights{
-	display: inline-flex;
-	height: 1rem;
-}
-.footer-2 p{
-	padding: 0 0.25rem 0 0.25rem;
+.footer-1-media-2 li a {
+  font-weight: 500;
+  display: inline;
+  line-height: 24px;
+  color: #aaa;
+  font-family: "Archivo Narrow", sans-serif;
 }
 
-.tnwimage{
-	height: 0.75rem;
+.footer-2 {
+  background-color: black;
+  width: 100%;
+  height: 4rem;
+  padding: 2rem 0 0 0;
+  font-size: 14px;
+  color: #aaa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.copyrights {
+  display: inline-flex;
+  height: 1rem;
+}
+.footer-2 p {
+  padding: 0 0.25rem 0 0.25rem;
 }
 
-.stackpath{
-	height: 0.75rem;
+.tnwimage {
+  height: 0.75rem;
+}
+
+.stackpath {
+  height: 0.75rem;
 }
 /*************************************************/
 
-
 /**************START MEDIA QUERIES ***************/
-@media only screen and (max-width: 1024px){
-	.main-header h5 {
-		position: relative;
-		color: #fff;
-		left: 2%;
-		top: 10px;
-		font-size: 0.75rem;
-		font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-	}
-	.flexnews-part-img {
-		background-color: #131313;
-		background-position: 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 100%;
-		height: 12rem;
-		overflow: hidden;
-		word-wrap: break-word;
-	}
-	.deals-header-right{
-		display: none;
-	}
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .main-header h5 {
+    position: relative;
+    color: #fff;
+    left: 2%;
+    top: 10px;
+    font-size: 0.75rem;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .flexnews-part-img {
+    background-color: #131313;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  .deals-header-right {
+    display: none;
+  }
+  .news-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .flex-row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
 }
-@media only screen and (max-width: 768px){
-	.main-header h5 {
-		position: relative;
-		color: #fff;
-		left: 2%;
-		top: 10px;
-		font-size: 0.5rem;
-		font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-	}
-	.news-grid{
-		display: grid;
-		grid-template-columns: auto auto;
-		grid-gap: 5px;
-	  
-	}
-	.news-grid-item{
-		height: 12rem;
-	}
-	.flexnews-part-img {
-		background-color: #131313;
-		background-position: 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 100%;
-		height: 10rem;
-		overflow: hidden;
-		word-wrap: break-word;
-	}
-	.deals-header-right{
-		display: none;
-	}
-	.flex-deals-part {
-		position: relative;
-		flex-basis: 30%;
-		padding: 12px;
-		cursor: pointer;
-		background: #fffaf8;
-	}
-}
-@media only screen and (max-width: 480px){
-    .main-header h5 {
-		position: relative;
-		color: #fff;
-		left: 2%;
-		top: 10px;
-		font-size: 0.25rem;
-		font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-	}
-	.headlines {
-		height: 25rem;
-		padding: 2px 0;
-		display: block;
-	}
-	.news-grid{
-		display: grid;
-		grid-template-columns: auto;
-		grid-gap: 2px;
-	  
-	}
-	.news-grid-item{
-		height: 10rem;
-	}
-	.deals-header-right{
-		display: none;
-	}
-	.flex-deals-part {
-		position: relative;
-		flex-basis: 33%;
-		padding: 12px;
-		cursor: pointer;
-		background: #fffaf8;
-	}
+@media only screen and (max-width: 720px) {
+  .headlines {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .cover-image {
+    height: 60%;
+  }
+  .cover-image h2 {
+    font-size: 30px;
+  }
+  .small-headline {
+    height: 60%;
+  }
+  .main-header h5 {
+    position: relative;
+    color: #fff;
+    left: 2%;
+    top: 10px;
+    font-size: 0.5rem;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .latest-news{
+	  margin-top: 380px;
+  }
+  
+  .news-grid{
+	  display: block;
+  }
+  .news-grid-item{
+	  display: flex;
+	  height: auto;  
+  }
+  .flexnews-part-words{
+	  margin: 5px 10px;
+  }
+  .flexnews-part-words h4 {
+	color: #000;
+	font-size: 16px;
+	padding: 0 0 5px 0;
+	font-weight: bolder;
+  }
+  .deals-header{
+	  display: block;
+  }
+  .flexnews-part-words p {
+	color: #aaa;
+	font-size: 13px;
+  }
+  .flexnews-part-img {
+	  width: 100px;
+	  height: 100px;
+  }
+  .deals-header-right {
+    display: none;
+  }
+  .flex-deals-part {
+    position: relative;
+    flex-basis: 30%;
+    cursor: pointer;
+    background: #fffaf8;
+  }
+  .flex-row {
+	display: grid;
+	grid-template-columns: auto;
+	padding: 0 10px;
+  }
+  .latest-deals{
+	  margin: 0 20px !important;
+  }
 }
 
 /******************end****************************/
